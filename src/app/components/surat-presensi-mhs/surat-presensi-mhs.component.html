@@ -1,0 +1,213 @@
+<div class="pcoded-content">
+      <div class="card-header fg-white" style="background-color: #404E67; color: #fff; ">
+          <h3>Surat Pesensi Mahasiswa</h3>
+      </div>
+      <div id="layoutSidenav_content">
+          <main>
+              <!-- Begin Page Content -->
+              <div class="container-fluid">
+                  <!-- Content Row -->
+                  <br />
+                  <!-- form jadwal mengajar start -->
+                  <div class="row g-2">
+                      <div class="col-md">
+                          <div class="form-floating">
+                              <select class="form-select" aria-label="Tahun Akademik">
+                                <option value="20211">20211 - Semester Gasal 2021 - 2022
+                                </option>
+                                <option value="2020">2020 - Semester Transisi 2020 - 2021</option>
+                                <option value="20192">20192 - Semester Genap 2019 - 2020
+                                </option>
+                                <option value="20191">20191 - Semester Gasal 2019 - 2020
+                                </option>
+                                <option value="20190">20190 - Semester Transisi 2019 - 2020</option>
+                                <option value="20183">20183 - Semester Sisipan 2018 - 2019</option>
+                                <option value="20182">20182 - Semester Genap 2018 - 2019
+                                </option>
+                                <option value="20181">20181 - Semester Gasal 2018 - 2019
+                                </option>
+                                <option value="20180">20180 - Semester Transisi 2018 - 2019</option>
+                                <option value="20173">20173 - Semester Sisipan 2017 - 2018</option>
+                              </select>
+                              <label for="floatingSelectGrid">Tahun Akademik</label>
+                          </div>
+                      </div>
+                      <div class="col-md">
+                          <div class="form-floating">
+                              <select class="form-select" aria-label="Tahun Akademik">
+                                  <option value="KER">KER - Kerjasama</option>
+                                  <option value="NON">NON - Reguler Sore</option>
+                                  <option value="REG">REG - Reguler Pagi</option>
+                                  <option value="TES">TES - Program Tes</option>
+                              </select>
+                              <label for="floatingSelectGrid">Program</label>
+                          </div>
+                      </div>
+  
+                      <div class="col-md">
+                          <div class="form-floating">
+                              <select class="form-select" aria-label="Tahun Akademik">
+                                  <option value="301">301 - Teknik Kimia</option>
+                                  <option value="302">302 - Teknologi Pertambangan
+                                  </option>
+                                  <option value="303">303 - Teknik Sipil</option>
+                                  <option value="304">304 - Teknik Informatika
+                                  </option>
+                                  <option value="305">305 - Teknik Lingkungan</option>
+                                  <option value="306">306 - Perencanaan Wilayah dan
+                                      Kota</option>
+                                  <option value="444">444 - Prodi Tes</option>
+                              </select>
+                              <label for="floatingSelectGrid">Prodi</label>
+                          </div>
+                      </div>
+  
+                      <div class="col-md">
+                          <div class="form-floating">
+  
+                              <input class="form-control" type="date">
+                              <label for="floatingSelectGrid">Tanggal Surat</label>
+                          </div>
+                      </div>
+  
+  
+  
+                      <div class="col-md">
+                          <div class="form-floating">
+                              <input type="email" class="form-control" id="floatingInputGrid"
+                                  placeholder="name@example.com" value="">
+                              <label for="floatingInputGrid">No Surat</label>
+                          </div>
+                      </div>
+                      <!-- button -->
+                      <div class="col-md">
+                          <a class="btn btn-primary" href="#" role="button">Tampilkan</a>
+                      </div>
+                  </div>
+                  <!-- end Presensi Perkuliahan -->
+                  <br />
+                  <br />
+  
+                  <!-- table card full -->
+                  <div class="container-fluid">
+                      <div class="page-body">
+                          <!-- Config. table start -->
+                          <div class="card">
+                              <div class="card-header">
+                                  <h5> Daftar Surat Presensi Mahasiswa</h5>
+                                  <span>
+                                      Daftra Mahasiswa
+                                  </span>
+  
+                                  <div class="card-header-right">
+                                      <ul class="list-unstyled card-option">
+                                          <li><i class="feather icon-maximize full-card"></i></li>
+                                          <li><i class="feather icon-minus minimize-card"></i></li>
+                                          <li><i class="feather icon-trash-2 close-card"></i></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="card-block">
+                                  <!-- babeh -->
+                                  <!-- tabel -->
+                                  <div class="mb-3">
+                                      <div class="dt-responsive table-responsive" style="color: #516091;">
+                                          <table class="table row-hover table table-striped table-bordered nowrap">
+                                              <thead>
+                                                  <tr>
+                                                      <th class="ttl" rowspan="2" nowrap="true">No.</th>
+                                                      <th class="ttl" rowspan="2" nowrap="true">NPM</th>
+                                                      <th class="ttl" rowspan="2" nowrap="true">Nama</th>
+                                                      <th class="ttl" rowspan="2" nowrap="true">Status</th>
+                                                      <th class="ttl" rowspan="2" nowrap="true">MK</th>
+                                                      <th class="ttl" rowspan="2" nowrap="true">Kelas</th>
+                                                      <th class="ttl" rowspan="2" nowrap="true">
+                                                          Rata-rata<br>Kehadiran</th>
+                                                      <th class="ttl" colspan="3" nowrap="true">Cetak Individual
+                                                      </th>
+                                                      <th class="ttl" rowspan="2" nowrap="true"><input type="submit"
+                                                              class="button" name="Cetak" value="Cetak"></th>
+                                                  </tr>
+                                                  <tr>
+                                                      <th class="ttl" nowrap="true">&gt;= 14</th>
+                                                      <th class="ttl" nowrap="true">11..13</th>
+                                                      <th class="ttl" nowrap="true">&lt;= 10</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+  
+                                                  <tr>
+                                                      <td data-label="#">1</td>
+                                                      <td data-label="NRP">173040059</td>
+                                                      <td data-label="Nama">ABDI LAZUARDI PRATAMA</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label="Matakuliah">1</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label="Kehadiran">14.00</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""><input type="checkbox" name="dosenid[]" value=""
+                                                              checked=""></td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td data-label="#">1</td>
+                                                      <td data-label="NRP">173040012</td>
+                                                      <td data-label="Nama">ANDOVIDAL LOVES</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label="Matakuliah">1</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label="Kehadiran">14.00</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""><input type="checkbox" name="dosenid[]" value=""
+                                                              checked=""></td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td data-label="#">1</td>
+                                                      <td data-label="NRP">173040202</td>
+                                                      <td data-label="Nama">SAHA WAE BEBAS</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label="Matakuliah">1</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label="Kehadiran">14.00</td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""></td>
+                                                      <td data-label=""><input type="checkbox" name="dosenid[]" value=""
+                                                              checked=""></td>
+                                                  </tr>
+  
+  
+                                                  <tr>
+                                                      <td class="ul" colspan="10">&nbsp;</td>
+                                                      <td class="ul"><input type="submit" class="button" name="Cetak"
+                                                              value="Cetak"></td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- tabel -->
+                      </div>
+                  </div>
+                  <!-- Config. table end -->
+              </div>
+          </main>
+          <!-- footer start -->
+      </div>
+
+      <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-header start -->
+                <div id="layoutSidenav_content">
+        
+                </div>
+            </div>
+            <div id="styleSelector">
+        
+            </div>
+        </div>

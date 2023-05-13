@@ -1,0 +1,157 @@
+<div class="pcoded-content">
+      <div class="card-header fg-white">
+          <h3>Jadwal Praktikum Mahasiswa</h3>
+      </div>
+      <div id="layoutSidenav_content">
+          <main>
+              <!-- Begin Page Content -->
+              <div class="container-fluid">
+                  <!-- Content Row -->
+                  <br />
+                  
+                  <!-- form  start -->
+                  <div class="row g-2">
+                      <div class="col-md">
+                          <div class="form-floating">
+                            
+                              <select class="form-select" aria-label="Tahun Akademik" [(ngModel)]="kode_tahun_akademik">
+                                  <option value="20211" selected>20211 - Semester Gasal 2021 - 2022</option>
+                                  <option value="2020">2020 - Semester Transisi 2020 - 2021</option>
+                                  <option value="20192">20192 - Semester Genap 2019 - 2020</option>
+                                  <option value="20191">20191 - Semester Gasal 2019 - 2020</option>
+                                  <option value="20190">20190 - Semester Transisi 2019 - 2020</option>
+                                  <option value="20183">20183 - Semester Sisipan 2018 - 2019</option>
+                                  <option value="20182">20182 - Semester Genap 2018 - 2019</option>
+                                  <option value="20181">20181 - Semester Gasal 2018 - 2019</option>
+                                  <option value="20180">20180 - Semester Transisi 2018 - 2019</option>
+                                  <option value="20173">20173 - Semester Sisipan 2017 - 2018</option>
+                                  <option value="20172">20172 - Semester Genap 2017 - 2018</option>
+                              </select>
+                              <label for="tahun">Tahun Akademik</label>
+                              
+                          </div>
+                      </div>
+                      <div class="col-md">
+  
+                          <div class="form-floating">
+                              <input type="email" class="form-control" id="floatingInputGrid" id="nrp" name="nrp" [(ngModel)]="nrp">
+                              <label for="floatingInputGrid">NRP</label>
+                          </div>
+                          <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="errorNrp"
+        >
+        nrp harus diisi !
+        </div>
+  
+                      </div>
+                      <!-- button -->
+                      <div class="col-md">
+                        <button class="btn btn-primary" (click)="getData()">Tampilkan</button>
+                      </div>
+                  </div>
+                 
+                  <!-- end form -->
+              </div>
+              <br>
+              <div class="card-block">
+                <!-- <h5>{{pesanError}}</h5> -->
+              </div>
+               <!-- table card full -->
+               <div class="container-fluid">
+                  <div class="page-body">
+                      <!-- Config. table start -->
+                      <div class="card">
+                          <div class="card-header">
+                              <h5> Daftar Praktikum Mahasiswa</h5>
+                              
+                              <div class="card-header-right">
+                                  <ul class="list-unstyled card-option">
+                                      <li><i class="feather icon-maximize full-card"></i></li>
+                                      <li><i class="feather icon-minus minimize-card"></i></li>
+                                      <li><i class="feather icon-trash-2 close-card"></i></li>
+                                  </ul>
+                              </div>
+                          </div>
+                         
+                          <div class="card-block">
+                            <div
+                            class="alert alert-danger error"
+                            role="alert"
+                            *ngIf="errorHandler"
+                          >
+                            <h5>{{pesanError}}</h5>
+                          </div>
+                          
+                              <!-- babeh -->
+                              <!-- tabel -->
+                              <div class="mb-3">
+                                  <div class="card-content p-2 dt-responsive table-responsive" style="color: #4a5b92;">
+                                      <table class="table row-hover">
+                                          <thead>
+                                              <tr>
+                                                  <th>No</th>
+                                                  <th>Hari</th>
+                                                  <th>Jam</th>
+                                                  <th>Kode MK</th>
+                                                  <th>Matakuliah</th>
+                                                  <th>SKS</th>
+                                                  <th>Kelas</th>
+                                                  <th>Ruang</th>
+                                                  <th width="25%">Dosen</th>
+                                                  <th title="Kehadiran Kuliah">Presensi </th>
+
+                                              </tr>
+                                          </thead>
+                                          <tbody >
+                                              <!-- //getNrp(prak) -->
+                                              
+                                              <tr *ngFor="let data of jadwal; let i = index ">
+                                                
+                                                <!-- <div > -->
+                                                    <ng-container *ngIf="data.id_jenis_jadwal == 'P'">
+                                                  <td>{{i + 1}}</td>
+                                                  <td>{{data.nama_hari}}</td>
+                                                  <td>{{data.jam_kuliah}}</td>
+                                                  <td>{{data.kode_mk}}</td>
+                                                  <td>{{data.nama_mk}}</td>
+                                                  <td>{{data.sks_mk}}</td>
+                                                  <td>{{data.kelas}}</td>
+                                                  <td>{{data.ruangan}}</td>
+                                                  <td>{{data.nama_dosen}}</td>
+                                                  <td>{{data.kehadiran}}</td>
+                                                </ng-container>
+                                              </tr>
+                                              <!-- sum count -->
+                                              <tr >
+                                                  <td colspan="4">Total SKS :</td>
+                                                  <td id="totalSKS"><b>{{total}}</b></td>
+                                                  <td colspan="6"></td>
+                                              </tr>
+                                            
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- tabel -->
+                      </div>
+                  </div>
+                  <!-- Config. table end -->
+              </div>
+          </main>
+          <!-- footer start -->
+      </div>
+
+      <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-header start -->
+            <div id="layoutSidenav_content">
+    
+            </div>
+        </div>
+        <div id="styleSelector">
+    
+        </div>
+    </div>
